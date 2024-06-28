@@ -1,25 +1,10 @@
 import { useState } from "react";
+import { Task } from "../lib/types";
 import NewTask from "./NewTask";
 import TaskList from "./TaskList";
 
 export default function Main() {
-  const [tasks, setTasks] = useState([
-    {
-      id: "1",
-      content: "HTML",
-      done: false,
-    },
-    {
-      id: "2",
-      content: "CSS",
-      done: true,
-    },
-    {
-      id: "3",
-      content: "JS",
-      done: false,
-    },
-  ]);
+  const [tasks, setTasks] = useState<Task[]>([]);
 
   function addTask(content: string) {
     const task = {
