@@ -1,5 +1,5 @@
 # Tasks
 
-## A minimalist todo app made with React and Tailwind CSS
+A minimalist todo app made with React and Tailwind CSS
 
-![screenshot](/public/screenshot.png)
+[![screenshot](/public/screenshot.png)](https://online-tasks.vercel.app/)
