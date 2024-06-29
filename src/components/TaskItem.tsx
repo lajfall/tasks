@@ -2,6 +2,7 @@ import { cn } from "../lib/utils";
 import { Input } from "./ui/input";
 import { Checkbox } from "./ui/checkbox";
 import { Task } from "../lib/types";
+import { X } from "lucide-react";
 
 export default function TaskItem({
   task,
@@ -31,11 +32,9 @@ export default function TaskItem({
         value={task.content}
         onChange={(e) => onUpdateTask(task.id, e.target.value)}
       />
-      <img
+      <X
+        className="absolute right-2 group-hover:visible sm:invisible"
         onClick={() => onRemoveTask(task.id)}
-        className="absolute right-2 group-hover:block sm:hidden"
-        src="/delete.svg"
-        alt=""
       />
     </div>
   );

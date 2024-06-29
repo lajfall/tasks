@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Input } from "./ui/input";
+import { Plus } from "lucide-react";
 
 export default function NewTask({
   onAddTask,
@@ -17,7 +18,7 @@ export default function NewTask({
   return (
     <form onSubmit={handleSubmit} className="flex gap-x-2">
       <span className="grid size-10 shrink-0 place-items-center">
-        <img className="size-8" src="/add.svg" alt="" />
+        <Plus />
       </span>
       <Input
         className="focus-visible:ring-0"
