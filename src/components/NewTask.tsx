@@ -21,7 +21,7 @@ export default function NewTask({
         <Plus />
       </span>
       <Input
-        className="focus-visible:ring-0"
+        className="focus-visible:ring-0 focus-visible:ring-offset-0"
         value={content}
         onChange={(e) => setContent(e.target.value)}
         placeholder="New Task"

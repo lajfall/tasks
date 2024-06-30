@@ -26,7 +26,7 @@ export default function TaskItem({
       </span>
       <Input
         className={cn(
-          "focus-visible:ring-0",
+          "focus-visible:ring-0 focus-visible:ring-offset-0",
           task.done && "line-through opacity-50",
         )}
         value={task.content}
