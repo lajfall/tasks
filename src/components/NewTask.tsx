@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FormEvent, MouseEvent, useState } from "react";
 import { Input } from "./ui/input";
 import { Plus } from "lucide-react";
 
@@ -8,16 +8,22 @@ export default function NewTask({
   onAddTask: (content: string) => void;
 }) {
   const [content, setContent] = useState("");
+  type NewTaskEvent = FormEvent<HTMLFormElement> | MouseEvent<HTMLSpanElement>;
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: NewTaskEvent) {
     e.preventDefault();
-    onAddTask(content);
-    setContent("");
+    if (content.trim()) {
+      onAddTask(content);
+      setContent("");
+    }
   }
 
   return (
     <form onSubmit={handleSubmit} className="flex gap-x-2">
-      <span className="grid size-10 shrink-0 place-items-center">
+      <span
+        onClick={handleSubmit}
+        className="grid size-10 shrink-0 place-items-center"
+      >
         <Plus />
       </span>
       <Input
