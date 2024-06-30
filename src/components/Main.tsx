@@ -34,7 +34,7 @@ export default function Main() {
   }
 
   return (
-    <main className="mx-auto flex w-3/4 min-w-60 max-w-96 select-none flex-col">
+    <main className="mx-auto flex w-4/5 min-w-60 max-w-96 select-none flex-col">
       <NewTask onAddTask={addTask} />
       <TaskList
         tasks={tasks}
